@@ -8,6 +8,10 @@ import warnings
 warnings.filterwarnings('ignore')
 
 
+password_guess = st.text_input("What is the Password?")
+if password_guess != st.secrets["password"]:
+    st.stop()
+
 # Set up the app title and image
 st.title('Graduate Admission Predictor 🌟')
 st.image('admission.jpg', use_column_width = True, 
